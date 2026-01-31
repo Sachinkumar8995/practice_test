@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+        const container = document.getElementById('container');
+        const ul = document.createElement('ul');
+        let studentDetails = [ 
+        {name: 'Rohit', marks: 86},
+        {name: 'Raushan', marks: 89},
+        {name: 'Sachin', marks: 93},
+        ];
+        let colors = ['red', 'green', 'blue'];
+        container.appendChild(ul);
+        let i=0;
+        studentDetails.forEach(student => {
+            let li = document.createElement('li');
+            li.textContent = `Name: ${student.name}, Marks: ${student.marks}`;
+            li.style.color = colors[i];
+            ul.appendChild(li);
+            i++;
+        });
+
+
+    </script>
+</body>
+</html>
